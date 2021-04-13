@@ -1,0 +1,183 @@
+@import "~normalize.css";
+@import "~antd/dist/antd.css";
+
+/*!* 样式的重置 *!*/
+body, html, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dt, dd, header, menu, section, p, input, td, th, ins {
+  padding: 0;
+  margin: 0;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.text-nowrap {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.text-wrap{
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+/*其它样式*/
+.ant-carousel .slick-dots li.slick-active button, .ant-carousel .slick-dots li.slick-active {
+  width: 15px;
+  border-radius: 6px;
+  background: #fa2800;
+}
+
+.slick-dots {
+  bottom: -8px !important;
+}
+
+.ant-carousel .slick-dots li, .ant-carousel .slick-dots button {
+  background: #a3a3ac;
+  height: 10px !important;
+  width: 10px;
+  border-radius: 50%;
+}
+
+/* ==========================================================================
+Base styles: opinionated defaults
+========================================================================== */
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+fieldset,
+lengend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  font-family: PingFang SC, Arial, Microsoft YaHei, sans-serif;
+  font-size: 14px;
+  width: 100%;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+  font-family: PingFang SC, Arial, Microsoft YaHei, sans-serif;
+  color: #4a4a4a;
+}
+
+h1 {
+  font-size: 18px;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: bold;
+}
+h2 {
+  font-size: 16px;
+  font-weight: bold;
+  opacity: .9;
+}
+
+h3 {
+  font-size: 14px;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #161e27;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  border-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  outline: none;
+  border: 0;
+}
+
+input:focus {
+  outline: none;
+}
+/*—滚动条默认显示样式–*/
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ababab;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+/*设置字体*/
+

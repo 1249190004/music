@@ -1,0 +1,51 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 2479928 */
+  src: url('//at.alicdn.com/t/font_2479928_qxpgpeftfu.eot');
+  src: url('//at.alicdn.com/t/font_2479928_qxpgpeftfu.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_2479928_qxpgpeftfu.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_2479928_qxpgpeftfu.woff') format('woff'),
+  url('//at.alicdn.com/t/font_2479928_qxpgpeftfu.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_2479928_qxpgpeftfu.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 22px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-search:before {
+  content: "\e612";
+}
+
+.icon-music:before {
+  content: "\ec66";
+}
+
+.icon-play:before {
+  content: "\e60d";
+  color: #d81e06;
+  font-size: 28px;
+}
+
+.icon-pause:before {
+  content: "\e610";
+  color: #d81e06;
+  font-size: 28px;
+}
+
+.icon-symbol:before {
+  content: "\e615";
+  color: #ababab;
+  font-size: 16px;
+  display: flex;
+}
+
+.icon-github:before {
+  content: "\e64c";
+  color: #ababab;
+  font-size: 16px;
+  display: flex;
+}
