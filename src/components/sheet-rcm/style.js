@@ -8,7 +8,7 @@ export const SheetRCMWrapper = styled.div`
     width: 1400px;
     min-width: 1350px;
     margin: 0 auto;
-    justify-content: center;
+    justify-content: flex-start;
   }
   a{
     color: #cccccc;
@@ -44,6 +44,9 @@ export const SheetRCMWrapper = styled.div`
 export const SheetRCMItemWrapper = styled.div`
   position: relative;
   width: 132px;
+  background-color: #d9d9d9;
+  border: 0.5px solid #c4c4c4;
+  border-radius: 5px;
   span{
     position: absolute;
     right: 12px;

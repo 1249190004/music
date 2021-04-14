@@ -12,7 +12,7 @@ const TDAppFooter = memo(function () {
             <i className="iconfont icon-symbol"></i>
           </span>
         </a>
-        <a href="https://github.com/marketplace">
+        <a href="https://github.com/1249190004/music">
           <span>
             <i className="iconfont icon-github"></i>
           </span>

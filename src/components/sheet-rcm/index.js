@@ -13,7 +13,6 @@ import {
 
 const TDSheetRCM = memo(function (props) {
   const {recommendSheet} = props
-
   return (
     <SheetRCMWrapper>
       <div>
@@ -22,7 +21,7 @@ const TDSheetRCM = memo(function (props) {
             return (
               <NavLink key={item.id} to={'/' + item.id}>
                 <SheetRCMItemWrapper className={"singerItem"}>
-                  <Image src={item.picUrl} size={132}/>
+                  <Image src={item.picUrl || item.coverImgUrl} size={132}/>
                   <span><i></i>{getCount(item.playCount)}</span>
                 </SheetRCMItemWrapper>
                 <h2 className="text-nowrap" title={item.name}>{item.name}</h2>

@@ -3,6 +3,8 @@ import React from 'react'
 import {Redirect} from 'react-router-dom'
 
 import Discover from "@/views/discover";
+import TDRanking from "@/views/ranking";
+import TDSheet from "@/views/sheet";
 
 const routers = [
   {
@@ -13,7 +15,14 @@ const routers = [
   {
     path: "/discover",
     component: Discover,
-    routers: []
+  },
+  {
+    path: "/ranking",
+    component: TDRanking,
+  },
+  {
+    path: "/sheet",
+    component: TDSheet,
   }
 ]
 

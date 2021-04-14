@@ -11,5 +11,5 @@ export const BannersWrapper = styled.div`
   display: flex!important;
   justify-content: space-around;
   width: 90%!important;
-  margin: 100px auto 20px;
+  margin: 20px auto;
 `

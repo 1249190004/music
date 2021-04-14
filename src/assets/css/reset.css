@@ -20,12 +20,14 @@ a {
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.text-wrap{
+
+.text-wrap {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
+
 /*其它样式*/
 .ant-carousel .slick-dots li.slick-active button, .ant-carousel .slick-dots li.slick-active {
   width: 15px;
@@ -44,6 +46,104 @@ a {
   border-radius: 50%;
 }
 
+/*歌单submenu样式设置*/
+.ant-menu-submenu-popup, .ant-menu-vertical {
+  width: 700px;
+  height: 400px;
+  top: 150px;
+}
+
+.ant-menu-vertical.ant-menu-sub {
+  max-height: 400px;
+}
+
+.ant-menu-item-group-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 12px !important;
+}
+
+.ant-menu-item-group {
+  padding: 5px;
+}
+
+.anticon-down {
+  display: inline-block !important;
+  margin-top: 16px;
+  font-size: 15px !important;
+}
+
+.ant-menu-submenu-title:hover {
+  color: #f7f7f7!important;
+  background: #fa2800 !important;
+}
+.ePjXqV .ant-menu .control-type .ant-menu-submenu-title{
+  background: #f7f7f7;
+  color: #161e27;
+  font-size: 12px;
+}
+
+.ant-menu-submenu-active div{
+  color: #f7f7f7!important;
+  background: #fa2800 !important;
+}
+.subMenu {
+  display: none;
+}
+.ant-menu .ant-menu-item:nth-child(24){
+  margin-right: 280px!important;
+}
+
+.ant-menu-horizontal:not(.ant-menu-dark) > .ant-menu-item-selected {
+  color: #fa2800;
+}
+
+.ant-menu-item-group-title {
+  font-weight: bold;
+  color: #161e27;
+  font-size: 15px;
+}
+
+.ant-menu-item-group-list .ant-menu-item, .ant-menu-item-group-list .ant-menu-submenu-title {
+  padding: 0 18px;
+  background: #f7f7f7;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 16px;
+  margin: 0 10px 10px 0;
+  cursor: pointer;
+  font-size: 12px;
+  color: #161e27;
+  transition: all 0.4s;
+}
+
+.ant-menu-item-group-list .ant-menu-item:hover {
+  color: #fff;
+  background: #fa2800;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  color: #fff;
+  background: #fa2800;
+}
+
+.ant-modal-wrap{
+  backdrop-filter: blur(5px);
+}
+.control-type {
+  height: 30px;
+  line-height: 30px;
+  font-size: 14px;
+  background: #f7f7f7;
+}
+
+.control-type div.ant-menu-submenu-title {
+  font-size: 13px !important;
+}
+.ant-spin-spinning{
+  width: 100%;
+  margin: 20px 0;
+}
 /* ==========================================================================
 Base styles: opinionated defaults
 ========================================================================== */
@@ -89,6 +189,10 @@ html {
   width: 100%;
 }
 
+body {
+  padding-top: 100px;
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -114,9 +218,11 @@ textarea {
 h1 {
   font-size: 18px;
 }
-h1,h2,h3,h4,h5,h6{
+
+h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
 }
+
 h2 {
   font-size: 16px;
   font-weight: bold;
@@ -162,6 +268,7 @@ textarea {
 input:focus {
   outline: none;
 }
+
 /*—滚动条默认显示样式–*/
 
 ::-webkit-scrollbar {
