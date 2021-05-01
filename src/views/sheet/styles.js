@@ -13,13 +13,6 @@ export const SheetWrapper = styled.div`
       background-color: #ffffff;
       box-shadow: 0 5px 40px -1px rgb(2 10 18 / 10%);
       
-      li{
-        border: none!important;
-        &:hover{
-          color: #ff4b2b!important;
-        }
-      }
-      
       .ant-menu-submenu{
         margin-left: 0;
         
@@ -40,31 +33,8 @@ export const SheetWrapper = styled.div`
           padding:0 15px;
       }
   }
-  
-  .ant-pagination{
-    display: flex;
-    justify-content: center;
-    margin-bottom: 25px;
     
-    li,button{
-      background-color: #f4f4f5;
-      color: #606266;
-      border-radius: 2px;
-      border: none;
-      font-size: 13px;
-      &:hover a{
-        color: #ff4b2b;
-      }
-    }
-    
-    li.ant-pagination-total-text{
-      background: #ffffff;
-    }
-    .ant-pagination-item-active,
-    .ant-pagination-item-active a{
-      background-color: #fa2800;
-      color: #ffffff!important;
-    }
-  }  
-  
+  .ant-menu .ant-menu-item:nth-child(24){
+    margin-right: 280px!important;
+  }
 `

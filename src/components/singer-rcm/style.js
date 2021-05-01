@@ -4,9 +4,10 @@ export const SingerRCMWrapper = styled.div`
   display: flex;
   max-width: 1400px;
   margin: 0 auto;
-  justify-content: space-around;
+  justify-content: flex-start;
   flex-wrap: wrap;
-  div{
+  
+  a{
     flex: 0 0 10%;
     display: flex;
     justify-content: center;
@@ -24,9 +25,12 @@ export const SingerRCMWrapper = styled.div`
       border-radius: 50%;
       box-shadow: 0 0 5px;
       width: 108px;
+      height: 108px;
     }
     h3,span{
       width: 100%;
+      display: flex;
+      justify-content: center;
       text-align: center;
     }
     h3{

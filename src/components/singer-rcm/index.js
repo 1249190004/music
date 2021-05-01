@@ -1,22 +1,27 @@
 import React, {memo} from 'react';
+import {NavLink} from "react-router-dom"
 
 import Image from "../image";
+import TDLoading from "../loading";
 import {SingerRCMWrapper} from "./style";
 
 const TDSingerRCM = memo(function (props) {
-  const {recommendSinger} = props
+  const {recommendSinger = []} = props
   return (
     <SingerRCMWrapper>
       {
-        recommendSinger.map(item => {
+        recommendSinger.length > 0 ? recommendSinger.map(item => {
           return (
-            <div key={item.img1v1Id}>
-              <Image src={item.img1v1Url} size={108}/>
-              <h3>{item.name}</h3>
-              <span>{"单曲数:"+item.musicSize}</span>
-            </div>
+
+            <NavLink to={"/singer-detail/" + item.id} key={item.id}>
+              <div>
+                <Image src={item.img1v1Url} size={108}/>
+                <h3>{item.name}</h3>
+                <span>{"单曲数:" + item.musicSize}</span>
+              </div>
+            </NavLink>
           )
-        })
+        }) : <TDLoading/>
       }
     </SingerRCMWrapper>
   )

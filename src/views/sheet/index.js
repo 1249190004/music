@@ -1,7 +1,7 @@
 import React, {memo, useEffect, useState} from 'react';
 import {useDispatch, useSelector, shallowEqual} from "react-redux";
 
-import {Menu, Pagination} from 'antd';
+import {Menu, Pagination, Skeleton} from 'antd';
 import {DownOutlined} from "@ant-design/icons"
 import TDSheetRCM from "../../components/sheet-rcm";
 
@@ -14,6 +14,7 @@ import {SheetWrapper} from "./styles";
 
 const TDSheet = memo(function () {
   const {SubMenu} = Menu
+
   const dispatch = useDispatch()
   useEffect(() => {
     dispatch(getHotSheetAction())
@@ -21,10 +22,11 @@ const TDSheet = memo(function () {
     dispatch(getSheetListAction())
   }, [dispatch])
 
-  const {hotBanners = [], catList = {}, sheetList = []} = useSelector(state => ({
+  const {hotBanners = [], catList = {}, sheetList = {}, loading} = useSelector(state => ({
     hotBanners: state.getIn(["sheet", "hotBanners"]),
     catList: state.getIn(["sheet", "catList"]),
-    sheetList: state.getIn(["sheet", "sheetList"])
+    sheetList: state.getIn(["sheet", "sheetList"]),
+    loading: state.getIn(["sheet", "loading"])
   }), shallowEqual)
 
   let [title, changeTitle] = useState("全部")
@@ -48,6 +50,7 @@ const TDSheet = memo(function () {
       case 3:
         offset = item
         changeOffset(item)
+        document.documentElement.scrollTop = 0
         break
       default:
     }
@@ -94,13 +97,15 @@ const TDSheet = memo(function () {
                  popupClassName="subMenu"
                  onTitleClick={_ => changeParam("new", 2)}/>
       </Menu>
-      <TDSheetRCM recommendSheet={sheetList.total ? sheetList.playlists : []}/>
-      {sheetList.total && <Pagination current={offset + 1}
-                              total={sheetList.total}
-                              showSizeChanger={false}
-                              pageSize={40}
-                              showTotal={total => `共 ${total} 条`}
-                              onChange={page => changeParam(page - 1, 3)}/>}
+      <Skeleton active loading={!sheetList.total}>
+        <TDSheetRCM recommendSheet={sheetList.playlists}/>
+        <Pagination current={offset + 1}
+                    total={sheetList.total}
+                    showSizeChanger={false}
+                    pageSize={40}
+                    showTotal={total => `共 ${total} 条`}
+                    onChange={page => changeParam(page - 1, 3)}/>
+      </Skeleton>
     </SheetWrapper>
   )
 })

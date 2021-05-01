@@ -2,13 +2,17 @@ import axios from "axios";
 
 import {BASE_URL, TIMEOUT} from "./config";
 
-
 export default function request(option) {
   return new Promise(((resolve, reject) => {
     const instance = axios.create({
-      baseURL: BASE_URL,
-      timeout: TIMEOUT
-    });
+        baseURL: BASE_URL,
+        timeout: TIMEOUT,
+        withCredentials: true,
+        params: {
+          // cookie: encodeURIComponent(window.localStorage.getItem("cookie"))
+        }
+      })
+    ;
 
     instance.interceptors.request.use(config => config, err => err)
 

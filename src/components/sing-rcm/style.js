@@ -30,7 +30,7 @@ export const SingRCMItemWrapper = styled.div`
     >div:first-of-type{
       height: 44px;
       width: 28px;
-      position: relative;
+      position: relative; 
       cursor: pointer;
       span{
         display: inline-block;
@@ -46,6 +46,11 @@ export const SingRCMItemWrapper = styled.div`
       }  
       i{
         display: none;
+        width: 28px;
+        height: 44px;
+        line-height: 44px;
+        text-align: center;
+        font-weight: 500;
       }
       &:hover{
         span{
@@ -57,9 +62,14 @@ export const SingRCMItemWrapper = styled.div`
       }
     }
     
+    .singer{
+      font-size: 12px;
+    }
+    
     >div:last-of-type{
       display: flex;
       flex: 0 0 24%;
+      width: 24%;
       flex-direction: column;    
       span:first-of-type{
         font-weight: bold;

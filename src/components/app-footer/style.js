@@ -8,7 +8,9 @@ export const FooterWrapper = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  
+  bottom: 0;
+  flex: 0 0 auto;
+
   p{
     width: 100%;
     position: relative;

@@ -5,8 +5,8 @@ export const SheetRCMWrapper = styled.div`
   > div{
     display: flex;
     flex-wrap: wrap;
-    width: 1400px;
-    min-width: 1350px;
+    width: 100%;
+    max-width: 1380px;
     margin: 0 auto;
     justify-content: flex-start;
   }
@@ -38,6 +38,8 @@ export const SheetRCMWrapper = styled.div`
   img{
     border-radius: 4px;
     height: 132px;
+    z-index: 2;
+    position: relative;
   }
 `
 
@@ -47,9 +49,12 @@ export const SheetRCMItemWrapper = styled.div`
   background-color: #d9d9d9;
   border: 0.5px solid #c4c4c4;
   border-radius: 5px;
+  z-index: 2;
+  
   span{
     position: absolute;
-    right: 12px;
+    z-index: 99;
+    right: 8px;
     top: 1px;
     height: 24px;
     width: auto;
@@ -88,7 +93,7 @@ export const SheetRCMItemWrapper = styled.div`
       left: 5px;
       transform: scale(0.85);
       transform-origin: 100% 50%;
-      z-index: -1;
+      z-index: 1;
       border-radius: 2px;
     }
     
