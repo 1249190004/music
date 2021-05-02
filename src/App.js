@@ -20,7 +20,7 @@ const App = memo(function () {
         <ScrollToTop>
           <TDPlayMusicUrl>
             <TDAppHeader/>
-            <Suspense fallback={<Skeleton active/>}>
+            <Suspense fallback={<div>数据载入中</div>}>
               {renderRoutes(routers)}
             </Suspense>
             <BackTop>
