@@ -22,7 +22,7 @@ const TDPersonal = memo(function () {
   const [userDetail, changeUserDetail] = useState({})
   const [userRecord, changeUserRecord] = useState([])
   const [userPlaylist, changeUserPlaylist] = useState([])
-  const userId = JSON.parse(window.localStorage.getItem("profile")).userId
+  const userId = window.localStorage.getItem("profile") ? JSON.parse(window.localStorage.getItem("profile")).userId : 0
   useEffect(() => {
     const getUserInfo = async _ => {
       const detail = await getUserDetail(keyword)

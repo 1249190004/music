@@ -128,7 +128,7 @@ const TDMvDetail = memo(function () {
             <i className="iconfont icon-comment"/>Comments
             | {mvDesc.commentCount + "条评论"}
           </div>
-          {mvHotComment.length > 0 && (
+          {mvHotComment && (
             <div className="hot-comments">
               <h2>精彩评论</h2>
               <TDComment comment={mvHotComment}/>

@@ -400,6 +400,11 @@ textarea::-webkit-input-placeholder {
   bottom: 80px;
 }
 
+/* 走马灯设置*/
+.ant-carousel {
+  margin: 0 auto;
+}
+
 /* ==========================================================================
 Base styles: opinionated defaults
 ========================================================================== */
